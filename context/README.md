@@ -1,1 +1,1 @@
-This is the directory where to place files and directories that are to be copied in the docker image.
+Put here files and directories that are to be placed in the docker image.
