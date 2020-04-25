@@ -8,7 +8,7 @@ The production image uses python 3.7 and pacakges provided by the distribution, 
 To have the same version installed in production it is necessary to rebuild package from debian 11, it is not possibile to simple install the package because it depends from python 3.8. To accomplish the rebuild in a coherent way without leaving useless packages into the image the build is made using [multistage method](https://docs.docker.com/develop/develop-images/multistage-build/).
 
 ## Creating the image
-As reported in docker site [instrucions](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) it's better to create separate directories for dockerfiles and context.
+As reported in docker site [instructions](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) it's better to create separate directories for dockerfiles and context.
 
 Build the image with the command
 ```

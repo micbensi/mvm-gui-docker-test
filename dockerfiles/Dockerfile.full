@@ -23,7 +23,8 @@ RUN apt-get update && \
     pyqt5-dev pyqt5-dev-tools exfat-fuse esptool && \
     apt-get clean && \
     dpkg -i /tmp/python3-yaml_*.deb && \
-    groupadd -g 1000 pi && useradd -u 1000 -g 1000 -m -s /bin/bash pi && \
+    groupadd -g 1000 pi && useradd -u 1000 -g 1000 -G dialout -m \
+      -s /bin/bash pi && \
     ln -s /usr/bin/pytest-3 /usr/bin/pytest && \
     ln -s /usr/bin/python3 /usr/bin/python
 USER pi
