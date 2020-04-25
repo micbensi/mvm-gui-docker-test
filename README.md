@@ -23,6 +23,6 @@ git clone https://github.com/fmselab/mvm-gui.git
 ```
 and run the tests
 ```
-docker run --rm -ti -v $PWD/mvm-gui:/mvm-gui -e MVMGUI_BASEDIR=/mvm-gui -w /mvm-gui/gui /mvm-gui/gui pytest testfile.py
+docker run --rm -ti -v $PWD/mvm-gui:/mvm-gui -e MVMGUI_BASEDIR=/mvm-gui -w /mvm-gui/gui mvm-gui-test pytest testfile.py
 ```
 
