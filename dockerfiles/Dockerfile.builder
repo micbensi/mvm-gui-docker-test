@@ -18,7 +18,8 @@ RUN apt-get update && \
     apt-get -y install locales-all locales python3 \
     python3-pyqt5 python3-pyqtgraph python3-numpy python3-serial \
     python3-yaml python3-pytest python3-pytestqt python3-coverage \
-    python3-pytest-xvfb python3-xvfbwrapper && \
+    python3-cov-core python3-pytest-cov python3-pytest-xvfb \
+    python3-xvfbwrapper && \
     apt-get clean && \
     dpkg -i /tmp/python3-yaml_*.deb && \
     groupadd -g 1000 pi && useradd -u 1000 -g 1000 -G dialout -m \
