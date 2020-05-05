@@ -1,0 +1,4 @@
+[submodule "mvm-gui"]
+	path = mvm-gui
+	url = https://github.com/fmselab/mvm-gui.git
+	branch = testwtravis

@@ -1,0 +1,10 @@
+language: python
+
+services:
+  - docker
+
+before_install:
+  - docker build -t mvm-test -f dockerfiles/Dockerfile.full context/
+
+script:
+  - docker run -it --rm -v $PWD/mvm-gui:/mvm-gui -e MVMGUI_BASEDIR=/mvm-gui -w /mvm-gui mvm-test pytest --cov-report html --cov=gui --cov-config=.coveragerc gui/tests
