@@ -7,4 +7,6 @@ before_install:
   - docker build -t mvm-test -f dockerfiles/Dockerfile.full context/
 
 script:
-  - docker run -it --rm -v ${TRAVIS_BUILD_DIR}/mvm-gui:/mvm-gui -e MVMGUI_BASEDIR=/mvm-gui -w /mvm-gui mvm-test pytest --cov-report html --cov=gui --cov-config=.coveragerc gui/tests
+  - docker run -it --rm -v ${TRAVIS_BUILD_DIR}/mvm-gui:/mvm-gui -e MVMGUI_BASEDIR=/mvm-gui -w /mvm-gui mvm-test python3-coverage run -m pytest
+  - docker run -it --rm -v ${TRAVIS_BUILD_DIR}/mvm-gui:/mvm-gui -e MVMGUI_BASEDIR=/mvm-gui -w /mvm-gui mvm-test python3-coverage report -m
+  - docker run -it --rm -v ${TRAVIS_BUILD_DIR}/mvm-gui:/mvm-gui -e MVMGUI_BASEDIR=/mvm-gui -w /mvm-gui mvm-test python3-coverage html
