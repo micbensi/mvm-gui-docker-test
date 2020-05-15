@@ -15,10 +15,10 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 COPY --from=builder /build/python3-yaml_*.deb /tmp/
 RUN apt-get update && \
-    apt-get -y install locales-all locales python3 \
+    apt-get -y install locales-all locales python3 fonts-noto-mono \
     python3-pyqt5 python3-pyqtgraph python3-numpy python3-serial \
     python3-yaml python3-pytest python3-pytestqt python3-coverage \
-    python3-cov-core python3-pytest-cov python3-pytest-xvfb \
+    python3-cov-core python3-pytest-cov python3-pytest-xvfb fonts-cantarell \
     python3-xvfbwrapper && \
     apt-get clean && \
     dpkg -i /tmp/python3-yaml_*.deb && \
